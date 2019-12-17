@@ -49,7 +49,7 @@ function processFirstItem(stringList, callback) {
  * should return "There are 0".
 */
 function processLength(list, callback) {
-  return callback([list.processLength])
+  return callback(list.length);
 }
 
 /**
@@ -66,8 +66,8 @@ function processLength(list, callback) {
  * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'barbar'.
 */
-function processLastItem(/* CODE HERE */) {
-  /* CODE HERE */
+function processLastItem(stringList, callback) {
+  return callback(stringList[stringList.length - 1])
 }
 
 /**
@@ -87,8 +87,10 @@ function processLastItem(/* CODE HERE */) {
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
 */
-function processSum(/* CODE HERE */) {
+function processSum (numberList, callback) {
+
   /* CODE HERE */
+
 }
 
 /**
@@ -109,8 +111,12 @@ function processSum(/* CODE HERE */) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
-  /* CODE HERE */
+const processProduct = (num1, num2, callback) => {
+      return callback(num1, num2);
+}
+
+const mult = (num1, num2) => {
+  return num1 * num2;
 }
 
 /**
